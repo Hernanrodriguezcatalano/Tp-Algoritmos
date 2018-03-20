@@ -4,7 +4,7 @@
 
 static queue Tqueue;
 
-/*int main() {
+int main() {
 
 	for (size_t i = 0; i <= M; i++)
 	{
@@ -21,4 +21,4 @@ static queue Tqueue;
 	
 	first(Tqueue);
 	assert(Tqueue.size_t > 0);
-}*/
+}
