@@ -1,9 +1,10 @@
 #include "stdafx.h"
 #include <iostream>
-#include <assert.h>
 #include "QueueEnlazado.h"
 
 using namespace std;
+
+bool esPalindromo(Queue);
 
 static Queue TQueue;
 static int a = 0, c;
@@ -15,23 +16,50 @@ int main() {
 		cout << "Ingresa un para para introducir al Stack: ";
 		cin >> c;
 		enQueue(TQueue, c);
-		cout << "1.Para introducir otro valor.[MAX 800]" << endl << "2.¿Es Palindromo?" << endl;
+		cout << "1.Para introducir otro valor" << endl << "2.¿Es Palindromo?" << endl;
 		cin >> a;
-		assert(a>0 && a<3);
-
 	}
-
-	cout << "El Queue : ";
 
 	if (EsPalindromo(TQueue))
 	{
-
 		cout << "Es Palindromo";
 		cin >> a;
 	}
 	else
 	{
-
 		cout << "No es Palindromo";
 		cin >> a;
 	}
+}
+
+bool EsPalindromo(Queue q) {
+
+	const int N = 800;
+	array <int, N> arraux;
+	array <int, N> arraux2;
+
+	unsigned Long = q.nivel;
+
+	for (size_t i = 0; i < Long; i++)
+	{
+		arraux[i] = deQueue(q);
+		cout << "arraux: " << arraux[i] << endl;
+	}
+
+	for (size_t i = 0; i < Long; i++)
+	{
+		arraux2[i] = arraux[i];
+		cout << "arraux2: " << arraux2[i] << endl;
+	}
+
+	for (size_t i = 0; i < Long ; i++)
+	{
+		if (arraux[i] != arraux2[Long - 1])
+		{
+			cout << "Error en :" << i << endl;
+			return false;
+		}
+		Long--;
+	}
+	return true;
+}
