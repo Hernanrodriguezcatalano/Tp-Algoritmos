@@ -17,18 +17,9 @@ int main() {
 		cout << "Ingresa un para para introducir al Stack: ";
 		cin >> c;
 		push(Tstack, c);
-		cout << "1.Para introducir otro valor" << endl << "2.¿Es Palindromo?" << endl;
+		cout << "1.Para introducir otro valor" << endl << "2.Â¿Es Palindromo?" << endl;
 		cin >> a;
 	}
-
-	cout << "El Stack : "<<endl ;
-	for (size_t i = 0; i < Tstack.nivel; i++)
-	{
-		Tstack.nivel = i;
-		cout << "[" << Tstack.first->value << "]" << endl;
-		Tstack.first->next;
-		
-	} 
 	
 	if (EsPalindromo(Tstack))
 	{
@@ -46,31 +37,34 @@ int main() {
 }
 
 bool EsPalindromo(Stack s) {
-	const int N = 50;
-	array <int,N> arraux;
-	Stack staux;
+
+	const int N = 800;
+	int i = 0;
+	array <int, N> arraux;
+	array <int, N> arraux2;
 
 	unsigned Long = s.nivel;
-	
+
 	for (size_t i = 0; i < Long; i++)
 	{
-		arraux[i] = s.first->value;
-		s.first->next;
+		arraux[i] = pop(s);
+		cout << "arraux: " << arraux[i] << endl;
 	}
 
 	for (size_t i = 0; i < Long; i++)
 	{
-		push(staux, pop(s));
+		arraux2[i] = arraux[i];
+		cout << "arraux2: " << arraux2[i] << endl;
 	}
 
-	for (size_t i = 0; i < Long; i++)
+	for (size_t i = 0; i < Long / 2; i++)
 	{
-		if (staux.first->value != arraux[i])
+		if (arraux[i] != arraux2[Long - 1])
 		{
+			cout << "Error en :" << i << endl;
 			return false;
 		}
-		staux.first->next;
-
+		Long--;
 	}
 	return true;
 }
