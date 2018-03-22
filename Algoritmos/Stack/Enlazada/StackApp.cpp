@@ -57,7 +57,7 @@ bool EsPalindromo(Stack s) {
 		cout << "arraux2: " << arraux2[i] << endl;
 	}
 
-	for (size_t i = 0; i < Long / 2; i++)
+	for (size_t i = 0; i < Long ; i++)
 	{
 		if (arraux[i] != arraux2[Long - 1])
 		{
