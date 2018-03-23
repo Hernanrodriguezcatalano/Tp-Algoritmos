@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool esPalindromo(Queue);
+bool EsPalindromo(Queue);
 
 static Queue TQueue;
 static int a = 0, c;
@@ -36,7 +36,7 @@ bool EsPalindromo(Queue q) {
 
 	const int N = 800;
 	array <int, N> arraux;
-	array <int, N> arraux2;
+	Queue TQueue;
 
 	unsigned Long = q.nivel;
 
@@ -47,6 +47,22 @@ bool EsPalindromo(Queue q) {
 	}
 
 	for (size_t i = 0; i < Long; i++)
+	{
+		enQueue(TQueue, arraux[i]);
+	}
+
+	for (size_t i = 0; i < Long; i++)
+	{
+		if (deQueue(TQueue) != arraux[Long-1])
+		{
+			cout << "Error en : "<< i<<endl;
+			return false;
+		}
+		Long--;
+	}return true;
+
+	//array <int, N> arraux2;  // version con 2 Arrays
+	/*for (size_t i = 0; i < Long; i++) 
 	{
 		arraux2[i] = arraux[i];
 		cout << "arraux2: " << arraux2[i] << endl;
@@ -62,4 +78,5 @@ bool EsPalindromo(Queue q) {
 		Long--;
 	}
 	return true;
+	*/
 }
