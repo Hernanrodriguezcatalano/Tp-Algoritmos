@@ -38,5 +38,4 @@ unsigned length(const Stack& s) {
 
 void vaciarStack(Stack& s) {
 	s.first = nullptr;
-	s.nivel = 0;
 }  
