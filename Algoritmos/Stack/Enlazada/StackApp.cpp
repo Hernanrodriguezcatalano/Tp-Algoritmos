@@ -12,7 +12,7 @@ static int a = 0, c;
 using namespace std;
 
 int main() {
-	
+
 	while (a<2) {
 		cout << "Ingresa un para para introducir al Stack: ";
 		cin >> c;
@@ -20,7 +20,7 @@ int main() {
 		cout << "1.Para introducir otro valor" << endl << "2.¿Es Palindromo?" << endl;
 		cin >> a;
 	}
-	
+
 	if (EsPalindromo(Tstack))
 	{
 
@@ -39,9 +39,8 @@ int main() {
 bool EsPalindromo(Stack s) {
 
 	const int N = 800;
-	int i = 0;
 	array <int, N> arraux;
-	array <int, N> arraux2;
+	Stack TStack;
 
 	unsigned Long = s.nivel;
 
@@ -53,11 +52,27 @@ bool EsPalindromo(Stack s) {
 
 	for (size_t i = 0; i < Long; i++)
 	{
+		push(TStack, arraux[i]);
+	}
+
+	for (size_t i = 0; i < Long; i++)
+	{
+		if (pop(TStack) != arraux[i])
+		{
+			cout << "Error en : " << i << endl;
+			return false;
+		}
+	}return true;
+}
+
+	//array <int, N> arraux2; //version con 2 array
+	/*for (size_t i = 0; i < Long; i++)
+	{
 		arraux2[i] = arraux[i];
 		cout << "arraux2: " << arraux2[i] << endl;
 	}
 
-	for (size_t i = 0; i < Long ; i++)
+	for (size_t i = 0; i < Long; i++)
 	{
 		if (arraux[i] != arraux2[Long - 1])
 		{
@@ -68,3 +83,5 @@ bool EsPalindromo(Stack s) {
 	}
 	return true;
 }
+*/
+
