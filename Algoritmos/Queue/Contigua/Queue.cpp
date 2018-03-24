@@ -43,7 +43,5 @@ unsigned length(const queue& t) {
 }
 
 void vaciarQueue(queue& t) {
-	t.rear = 0;
-	t.front = 0;
 	t.size_t = 0;
 }
