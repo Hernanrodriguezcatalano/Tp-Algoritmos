@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "StackContiguo.h"
+#include "Stack.h"
 #include<iostream>
 
 using namespace std;
