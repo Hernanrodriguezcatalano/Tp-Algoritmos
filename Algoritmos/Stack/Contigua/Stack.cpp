@@ -6,43 +6,44 @@ using namespace std;
 
 
 void push(stack& s, int x) {
-	if (s.i < N) {
-		s.a.at(s.i) = x;
-		++s.i;
+	if (s.nivel < N) {
+		s.a.at(s.nivel) = x;
+		++s.nivel;
 	}
-	else 
+	else
 	{
 		cout << "Stack lleno";
 	}
 }
 
 int pop(stack& s) {
-	if(s.i > 0)
+	if (s.nivel > 0)
 	{
-		--s.i;
+		--s.nivel;
 	}
 	else
 	{
 		cout << "Stack Vacio";
 	}
-	return s.a.at(s.i);
-	
+	return s.a.at(s.nivel);
+
 }
 
 int top(const stack& s) {
-	if(s.i > 0)
-		return s.a.at(s.i - 1);
+	if (s.nivel > 0)
+		return s.a.at(s.nivel - 1);
 	else
 	{
 		cout << "Stack Vacio";
+		return 0;
 	}
 
 }
 
 unsigned length(const stack& s) {
-	return s.i;
+	return s.nivel;
 }
 
 void vaciarStack(stack& s) {
-	s.i = 0;
+	s.nivel = 0;
 }
