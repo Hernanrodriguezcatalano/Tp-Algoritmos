@@ -8,23 +8,23 @@ void enQueue(queue& t, int y) {
 	if (t.size_t < M) {
 		t.b.at(t.rear) = y;
 		++t.size_t;
-		++t.rear;
+		t.rear = (t.rear + 1) % M;
+
 	}
-	else
-	{
-		cout << "Queue lleno.";
+	else {
+		std::cout << "Queue Lleno.";
 	}
 }
 
 int deQueue(queue& t) {
 	if (t.size_t > 0) {
 		--t.size_t;
-		++t.front;
-		return t.b.at(t.front - 1);
+		t.front = (t.front + 1) % M;
+		return t.b.at((800 + t.front - 1) % M);
 	}
-	else
-	{
-		cout << "Queue vacio.";
+	else {
+		std::cout << "Queue Vacio";
+		return 0;
 	}
 }
 
@@ -32,11 +32,12 @@ int first(const queue& t) {
 	if (t.size_t != 0) {
 		return t.b.at(t.front);
 	}
-	else
-	{
-		cout << "Queue vacio.";
+	else {
+		std::cout << "Queue Vacio";
+		return 0;
 	}
 }
+
 
 unsigned length(const queue& t) {
 	return t.size_t;
