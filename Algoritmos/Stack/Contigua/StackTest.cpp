@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <cassert>
 #include <iostream>
-#include "StackContiguo.h"
+#include "Stack.h"
 
 using namespace std;
 
