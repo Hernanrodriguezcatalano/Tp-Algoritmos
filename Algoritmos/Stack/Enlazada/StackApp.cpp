@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include <iostream>
-#include "StackEnlazado.h"
+#include "Stack.h"
 #include <array>
 
 using namespace std;
