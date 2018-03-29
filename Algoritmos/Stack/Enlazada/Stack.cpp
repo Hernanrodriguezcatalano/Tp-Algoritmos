@@ -16,9 +16,12 @@ int pop(stack& s) {
 		--s.nivel;
 		return p->value;
 	}
+	else
+	{
 	std::cout << "Stack vacio!";
+	return 0;
+	}
 }
-
 int top(const stack& s) {
 	if (s.nivel != 0) {
 		return s.first->value;
