@@ -1,27 +1,39 @@
 #include "stdafx.h"
 #include <cassert>
-#include <iostream>
 #include "Stack.h"
 
-using namespace std;
-
-static stack Tstack;
+stack Tstack;
 
 int main(){
+	
+		push(Tstack, 1);
+		push(Tstack, 2);
+		push(Tstack, 3);
+		push(Tstack, 4);
+		assert(Tstack.nivel < N);
+		assert(Tstack.nivel > 0);
 
-		for (size_t i = 0; i <= N; i++)
-		{
-			push(Tstack, 1);
-		}
-		assert(Tstack.i < N);
-		
+		top(Tstack);
+
 		vaciarStack(Tstack);
-		
+
+		push(Tstack, 5);
+		push(Tstack, 6);
+		push(Tstack, 7);
+		push(Tstack, 8);
+		assert(Tstack.nivel < N);
+		assert(Tstack.nivel > 0);
+
+		top(Tstack);
+
 		pop(Tstack);
-		assert(Tstack.i > 0);
-
-		vaciarStack(Tstack);
+		pop(Tstack);
+		pop(Tstack);
+		assert(Tstack.nivel > 0);
+		assert(Tstack.nivel < N);	
 		
 		top(Tstack);
-		assert(Tstack.i > 0);
+
+		pop(Tstack);
+		assert(Tstack.nivel < N);
 }
