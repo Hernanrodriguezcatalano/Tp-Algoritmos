@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "QueueContiguo.h"
+#include "Queue.h"
 #include<iostream>
 
 using namespace std;
