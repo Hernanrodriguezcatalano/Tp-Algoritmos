@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include <iostream>
-#include <cassert.h>
 #include "Queue.h"
 
 using namespace std;
