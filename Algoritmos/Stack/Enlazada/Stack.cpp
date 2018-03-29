@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "StackEnlazado.h"
+#include "Stack.h"
 #include<iostream>
 
 void push(Stack& s, int x) {
