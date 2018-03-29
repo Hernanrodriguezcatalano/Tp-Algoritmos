@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include <assert.h>
-#include "StackEnlazado.h"
+#include <cassert.h>
+#include "Stack.h"
 
 static Stack Tstack;
 
