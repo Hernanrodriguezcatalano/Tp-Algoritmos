@@ -23,7 +23,10 @@ int top(const stack& s) {
 	if (s.nivel != 0) {
 		return s.first->value;
 	}
+	else{
 	std::cout << "Stack vacio!";
+		return 0;
+	}
 }
 
 unsigned length(const stack& s) {
