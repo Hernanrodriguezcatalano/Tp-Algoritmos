@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "QueueEnlazado.h"
-#include <assert.h>
+#include "Queue.h"
+#include <cassert.h>
 
 static Queue TQueue;
 
