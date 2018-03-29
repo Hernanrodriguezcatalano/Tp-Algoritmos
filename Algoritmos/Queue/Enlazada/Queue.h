@@ -1,19 +1,19 @@
 #include<iostream>
 #include<array>
-
+const int M = 32767;
 struct Node {
 	int value;
 	Node *next = nullptr;
 };
 
-struct Queue {
+struct queue {
 	Node *front = new Node;
 	Node *rear = front;
-	int nivel = 0;
+	int size_t = 0;
 };
 
-void enQueue(Queue&, int);
-int deQueue(Queue&);
-int first(const Queue&);
-unsigned length(const Queue&);
-void vaciarQueue(Queue&);
+void enQueue(queue&, int);
+int deQueue(queue&);
+int first(const queue&);
+unsigned length(const queue&);
+void vaciarQueue(queue&);
