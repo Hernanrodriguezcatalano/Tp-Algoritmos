@@ -5,7 +5,7 @@ const int N = 800;
 
 struct stack {
 	std::array<int, N> a;
-	unsigned i = 0;
+	unsigned nivel = 0;
 };
 
 void push(stack&, int);
