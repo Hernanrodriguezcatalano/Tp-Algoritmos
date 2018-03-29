@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <iostream>
-#include <assert.h>
-#include "QueueContiguo.h"
+#include <cassert.h>
+#include "Queue.h"
 
 using namespace std;
 static unsigned a;
@@ -15,11 +15,11 @@ int main() {
 		cout << "Ingresa un para para introducir a la Queue: ";
 		cin >> c;
 		enQueue(Tqueue, c);
-		cout << "1.Para introducir otro valor.[MAX 800]" << endl << "2.¿Es Palindromo?." << endl;
+		cout << "1.Para introducir otro valor.[MAX 800]" << endl << "2.Â¿Es Palindromo?." << endl;
 		cin >> a;
 		while (a<1 && a>2){
 			cout << "Ingrese un valor valido";
-			cout << "1.Para introducir otro valor.[MAX 800]" << endl << "2.¿Es Palindromo?." << endl;
+			cout << "1.Para introducir otro valor.[MAX 800]" << endl << "2.Â¿Es Palindromo?." << endl;
 			cin >> a;
 		}
 	}
