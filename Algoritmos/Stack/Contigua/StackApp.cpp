@@ -17,15 +17,15 @@ int main() {
 		cout << "Ingresa un para para introducir al Stack: ";
 		cin >> c;
 		push(Tstack, c);
-		cout << "1.Para introducir otro valor." << endl << "2.Para continuar." << endl;
+		cout << "1.Para introducir otro valor.[Max 800]" << endl << "2.Para continuar." << endl;
 		cin >> a;
 		if (a>0 && a<3) {}
 		else
 		{
 			while (!(a > 0 && a < 3))
 			{
-				cout << "Ingrese un valor valido." << endl << endl;
-				cout << "1.Para introducir otro valor." << endl << "2.Para continuar." << endl;
+				cout << "Ingrese un valor valido.[Max 800]" << endl << endl;
+				cout << "1.Para introducir otro valor.[Max 800]" << endl << "2.Para continuar." << endl;
 				cin >> a;
 			}
 		}
