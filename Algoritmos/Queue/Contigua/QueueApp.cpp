@@ -8,7 +8,7 @@ using namespace std;
 unsigned a = 1;
 
 int c;
-queue TQueue;
+queue Tqueue;
 
 bool EsPalindromo(queue q);
 
@@ -16,7 +16,7 @@ int main() {
 	while (a<2) {
 		cout << "Ingresa un para para introducir la Queue: ";
 		cin >> c;
-		enQueue(TQueue, c);
+		enQueue(Tqueue, c);
 		cout << "1.Para introducir otro valor.[Max 800]" << endl << "2.Para continuar." << endl;
 		cin >> a;
 		if (a>0 && a<3) {}
@@ -32,7 +32,7 @@ int main() {
 
 	}
 
-	if (EsPalindromo(TQueue))
+	if (EsPalindromo(Tqueue))
 	{
 
 		cout << "Es Palindromo";
