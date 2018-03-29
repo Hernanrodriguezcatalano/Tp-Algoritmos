@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include<iostream>
-#include "QueueEnlazado.h"
+#include <iostream>
+#include "Queue.h"
 
 using namespace std;
 
