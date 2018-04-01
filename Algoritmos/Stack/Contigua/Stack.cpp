@@ -47,3 +47,7 @@ unsigned length(const stack& s) {
 void vaciarStack(stack& s) {
 	s.nivel = 0;
 }
+
+bool IsEmpty(const stack & s){
+	return s.nivel == 0; 
+}
