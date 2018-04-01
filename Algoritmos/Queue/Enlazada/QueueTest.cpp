@@ -2,37 +2,28 @@
 #include <cassert>
 #include "Queue.h"
 
-queue TQueue;
-
 int main() {
-	enQueue(TQueue, 1);
-	enQueue(TQueue, 2);
-	enQueue(TQueue, 3);
-	enQueue(TQueue, 4);
-	assert(TQueue.size_t < M);
-	assert(TQueue.size_t > 0);
 
-	first(TQueue);
+	queue q;
 
-	vaciarQueue(TQueue);
+	enQueue(q, 1);
+	assert(first(q) == 1);
+	enQueue(q, 2);
+	assert(first(q) == 1);
+	enQueue(q, 3);
+	assert(first(q) == 1);
+	enQueue(q, 4);
+	assert(first(q) == 1);
 
-	enQueue(TQueue, 5);
-	enQueue(TQueue, 6);
-	enQueue(TQueue, 7);
-	enQueue(TQueue, 8);
-	assert(TQueue.size_t < M);
-	assert(TQueue.size_t > 0);
+	deQueue(q);
+	assert(first(q) == 2);
+	deQueue(q);
+	assert(first(q) == 3);
+	deQueue(q);
+	assert(first(q) == 4);
 
-	first(TQueue);
 
-	deQueue(TQueue);
-	deQueue(TQueue);
-	deQueue(TQueue);
-	assert(TQueue.size_t < M);
-	assert(TQueue.size_t > 0);
-
-	first(TQueue);
-
-	deQueue(TQueue);
-	assert(TQueue.size_t < M);
+	assert(!(IsEmpty(q)));
+	deQueue(q);
+	assert(IsEmpty(q));
 }
