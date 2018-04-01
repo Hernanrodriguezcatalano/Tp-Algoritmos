@@ -6,7 +6,6 @@ int main() {
 
 	queue q;
 
-	assert(IsEmpty(q));
 	enQueue(q, 1);
 	assert(first(q) == 1);
 	enQueue(q, 2);
