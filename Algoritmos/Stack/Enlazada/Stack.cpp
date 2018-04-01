@@ -18,16 +18,16 @@ int pop(stack& s) {
 	}
 	else
 	{
-	std::cout << "Stack vacio!";
-	return 0;
+		std::cout << "Stack vacio!";
+		return 0;
 	}
 }
 int top(const stack& s) {
 	if (s.nivel != 0) {
 		return s.first->value;
 	}
-	else{
-	std::cout << "Stack vacio!";
+	else {
+		std::cout << "Stack vacio!";
 		return 0;
 	}
 }
@@ -39,4 +39,8 @@ unsigned length(const stack& s) {
 void vaciarStack(stack& s) {
 	s.first = nullptr;
 	s.nivel = 0;
+}
+
+bool IsEmpty(const stack & s){
+	return s.first == nullptr; 
 }
