@@ -31,7 +31,7 @@ int deQueue(queue& t) {
 		std::cout << "Queue Vacio.";
 		return 0;
 	}
-	
+
 }
 
 int first(const queue& t) {
@@ -43,7 +43,7 @@ int first(const queue& t) {
 		std::cout << "Queue Vacio.";
 		return 0;
 	}
-	
+
 }
 
 unsigned length(const queue& t) {
@@ -54,4 +54,8 @@ void vaciarQueue(queue& t) {
 	t.front = new Node;
 	t.rear = t.front;
 	t.size_t = 0;
+}
+
+bool IsEmpty(const queue & q){
+	return q.front ==nullptr;
 }
