@@ -46,3 +46,7 @@ unsigned length(const queue& t) {
 void vaciarQueue(queue& t) {
 	t.size_t = 0;
 }
+
+bool IsEmpty(const queue & q){
+	return q.size_t == 0;
+}
