@@ -14,3 +14,4 @@ int deQueue(queue&);
 int first(const queue&);
 unsigned length(const queue&);
 void vaciarQueue(queue&);
+bool IsEmpty(const queue & q);
