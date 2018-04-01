@@ -2,38 +2,37 @@
 #include <cassert>
 #include "Stack.h"
 
-stack Tstack;
 
 int main() {
 
-	push(Tstack, 1);
-	push(Tstack, 2);
-	push(Tstack, 3);
-	push(Tstack, 4);
-	assert(Tstack.nivel < N);
-	assert(Tstack.nivel > 0);
+	stack s;
+	assert(IsEmpty(s));
+	push(s, 1);
+	assert(top(s) == 1);
+	push(s, 2);
+	assert(top(s) == 2);
+	push(s, 3);
+	assert(top(s) == 3);
+	push(s, 4);
+	assert(top(s) == 4);
 
-	top(Tstack);
+	vaciarStack(s);
 
-	vaciarStack(Tstack);
+	push(s, 5);
+	assert(top(s) == 5);
+	push(s, 6);
+	assert(top(s) == 6);
+	push(s, 7);
+	assert(top(s) == 7);
+	push(s, 8);
+	assert(top(s) == 8);
 
-	push(Tstack, 5);
-	push(Tstack, 6);
-	push(Tstack, 7);
-	push(Tstack, 8);
-	assert(Tstack.nivel < N);
-	assert(Tstack.nivel > 0);
+	pop(s);
+	pop(s);
+	pop(s);
+	assert(top(s) == 5);
 
-	top(Tstack);
-
-	pop(Tstack);
-	pop(Tstack);
-	pop(Tstack);
-	assert(Tstack.nivel > 0);
-	assert(Tstack.nivel < N);
-
-	top(Tstack);
-
-	pop(Tstack);
-	assert(Tstack.nivel < N);
+	assert(!(IsEmpty(s)));
+	pop(s);
+	assert(IsEmpty(s));
 }
