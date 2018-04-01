@@ -6,7 +6,7 @@
 int main() {
 
 	stack s;
-	assert(IsEmpty(s));
+
 	push(s, 1);
 	assert(top(s) == 1);
 	push(s, 2);
