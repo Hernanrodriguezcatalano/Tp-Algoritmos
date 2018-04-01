@@ -12,4 +12,5 @@ void push(stack&, int);
 int pop(stack&);
 int top(const stack&);
 unsigned length(const stack&);
-void vaciarStack(stack&); 
+void vaciarStack(stack&);
+bool IsEmpty(const stack & s);
