@@ -5,34 +5,34 @@
 
 using namespace std;
 
-unsigned a = 1;
-
-int c;
-stack Tstack;
-
-bool EsPalindromo(stack s);
-
 int main() {
+
+	bool EsPalindromo(stack s);
+	unsigned a = 1;
+	int c;
+
+	stack s;
+
 	while (a<2) {
 		cout << "Ingresa un para para introducir al Stack: ";
 		cin >> c;
-		push(Tstack, c);
-		cout << "1.Para introducir otro valor." << endl << "2.Para continuar." << endl;
+		push(s, c);
+		cout << "1.Para introducir otro valor.[Max 800]" << endl << "2.Para continuar." << endl;
 		cin >> a;
 		if (a>0 && a<3) {}
 		else
 		{
 			while (!(a > 0 && a < 3))
 			{
-				cout << "Ingrese un valor valido." << endl << endl;
-				cout << "1.Para introducir otro valor." << endl << "2.Para continuar." << endl;
+				cout << "Ingrese un valor valido.[Max 800]" << endl << endl;
+				cout << "1.Para introducir otro valor.[Max 800]" << endl << "2.Para continuar." << endl;
 				cin >> a;
 			}
 		}
 
 	}
 
-	if (EsPalindromo(Tstack))
+	if (EsPalindromo(s))
 	{
 
 		cout << "Es Palindromo";
@@ -49,25 +49,24 @@ int main() {
 bool EsPalindromo(stack s) {
 
 	array <int, N> arraux;
-	stack TStack;
+	stack aux;
 	unsigned Long = s.nivel;
 
 	for (size_t i = 0; i < Long; i++)
 	{
 		arraux.at(i) = pop(s);
-		push(TStack, arraux.at(i));
+		push(aux, arraux.at(i));
 	}
 	cout << "El Stack: " << endl;
 	for (size_t i = 0; i < Long; i++)
 	{
-		cout << "[" << arraux.at(Long-i-1) << "]" << endl;
+		cout << "[" << arraux.at(Long - i - 1) << "]" << endl;
 	}
 	for (size_t i = 0; i < Long; i++)
 	{
-		if (pop(TStack) != arraux.at(i))
+		if (pop(aux) != arraux.at(i))
 		{
 			return false;
 		}
 	}return true;
 }
-
