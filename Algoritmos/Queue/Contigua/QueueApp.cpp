@@ -5,18 +5,18 @@
 
 using namespace std;
 
-unsigned a = 1;
-
-int c;
-queue Tqueue;
-
-bool EsPalindromo(queue q);
-
 int main() {
+
+	unsigned a = 1;
+	int c;
+	
+	queue q;
+	bool EsPalindromo(queue q);
+	
 	while (a<2) {
 		cout << "Ingresa un para para introducir la Queue: ";
 		cin >> c;
-		enQueue(Tqueue, c);
+		enQueue(q, c);
 		cout << "1.Para introducir otro valor.[Max 800]" << endl << "2.Para continuar." << endl;
 		cin >> a;
 		if (a>0 && a<3) {}
@@ -32,7 +32,7 @@ int main() {
 
 	}
 
-	if (EsPalindromo(Tqueue))
+	if (EsPalindromo(q))
 	{
 
 		cout << "Es Palindromo";
@@ -46,16 +46,16 @@ int main() {
 	}
 }
 
-bool EsPalindromo(queue s) {
+bool EsPalindromo(queue q) {
 
 	array <int, M> arraux;
-	queue TQueue;
-	unsigned Long = s.size_t;
+	queue Q;
+	unsigned Long = q.size_t;
 
 	for (size_t i = 0; i < Long; i++)
 	{
-		arraux.at(i) = deQueue(s);
-		enQueue(TQueue, arraux.at(i));
+		arraux.at(i) = deQueue(q);
+		enQueue(Q, arraux.at(i));
 	}
 	cout << "La Queue: " << endl;
 	for (size_t i = 0; i < Long; i++)
@@ -64,7 +64,7 @@ bool EsPalindromo(queue s) {
 	}
 	for (size_t i = 0; i < Long; i++)
 	{
-		if (deQueue(TQueue) != arraux.at(Long-1))
+		if (deQueue(Q) != arraux.at(Long - 1))
 		{
 			return false;
 		}
